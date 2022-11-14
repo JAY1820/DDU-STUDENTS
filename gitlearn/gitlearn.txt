@@ -1,1 +1,72 @@
-command
+GIT COMMAND
+
+
+Staging
+Before we make a commit, we must tell Git what files we want to commit (new untracked files, modified files, or deleted files). This is called staging and uses the add command. Why must we do this? Why can't we just commit something directly? Let's say you're working on two files, but only one of them is ready to commit. You don't want to be forced to commit both files, just the one that's ready. That's where Git's add command comes in. We add files to a staging area, and then we commit what has been staged. Even the deletion of a file must be tracked in Git's history, so deleted files must also be staged and then committed.
+
+Check Status
+Let's first check the status of our Git repo.
+
+1. In your terminal (Terminal, Git Bash, or Windows Command Prompt), navigate to the folder that is your Git repo.
+2. Enter this command:
+
+git status
+
+3. You'll see what branch you are on (which for new repos will be master) and status of files (untracked, modified, or deleted). We'll explain branches later.
+
+Stage Files to Prepare for Commit
+1. Enter one of the following commands, depending on what you want to do:
+
+Stage all files: git add .
+Stage a file: git add example.html (replace example.html with your file name)
+Stage a folder: git add myfolder (replace myfolder with your folder path)
+Keep in Mind:
+
+If the file name/path has a space, wrap it in quotes.
+You can repeat the above commands for different files and folders.
+2. Check the status again by entering the following command:
+
+git status
+
+3. You should see there are changes ready to be committed.
+
+Unstage a File
+If you accidental stage something, use the following command to unstage it:
+
+git reset HEAD example.html
+(replace example.html with your file or folder)
+
+Deleting Files
+If you delete files they will appear in git status as deleted, and you must use git add to stage them. Another way to do this is using git rm command, which both deletes a file and stages it all with one command:
+
+git rm example.html to remove a file (and stage it)
+git rm -r myfolder to remove a folder (and stage it)
+Commit Files
+1. Enter this command:
+
+git commit -m "Message that describes what this change does"
+
+TIP: For commit messages do you not use past tense, such as "I made headings blue". Use language like "Make headings blue", as if you are giving orders to the codebase. One reason for this is when you work with other people, your code may not be automatically approved. You'll request that they pull your changes into the codebase. When they read the commit messages they will do know what your code will do. Your change will "Make headings blue".
+
+2. Check the status again by running this command:
+
+git status
+
+3. If all changes have been committed, and there are no untracked files, it should say: nothing to commit, working tree clean.
+
+Fixing Your Last Commit Message
+If you made a mistake in your last commit message, run this command:
+
+git commit --amend -m "Put your corrected message here"
+
+View a List of Commits
+When viewing a list of commits, there are various commands depending on how much info you want to see.
+
+To see a simplified list of commits, run this command:
+git log --oneline
+To see a list of commits with more detail (such who made the commit and when), run this command:
+git log
+NOTE: If the list is long, use the Down/Up Arrow keys to scroll and hit Q to quit.
+
+To see a list of commits with even more detail (including which files changed), run this command:
+git log --stat
