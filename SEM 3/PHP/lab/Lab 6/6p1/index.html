@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student result</title>
+    <style>
+        input{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <form method="POST" name ="frm" action="./data1.php">
+        <table align="center">
+            <tr>
+                <th>Marksheet</th>
+            </tr>
+            <tr>
+                <td><input type="text" placeholder="Enter name" name="fname" required></td>
+            </tr>
+            <tr>
+                <td><input type="number" placeholder="Enter 1st subject mark" name="m1" max="100" min="0" required></td>
+            </tr>
+            <tr>
+                <td><input type="number" placeholder="Enter 2nd subject mark" name="m2" max="100" min="0" required></td>
+            </tr>
+            <tr>
+                <td><input type="number" placeholder="Enter 3rd subject mark" name="m3" max="100" min="0" required></td>
+            </tr>
+            <tr>
+                <td><input type="Submit" name="sbt" value="Submit"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

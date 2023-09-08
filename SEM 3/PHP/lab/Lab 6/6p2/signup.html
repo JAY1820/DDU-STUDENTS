@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login form</title>
+</head>
+<body>
+    <form method="POST" name ="frm" action="./viewhobbies.php">
+        <table align="center">
+            <tr>
+                <th>Sing in form</th>
+            </tr>
+            <tr>
+                <td><input type="text" placeholder="Enter name" name="fname" ></td>
+            </tr>
+
+            <tr>
+                <label for="enter a password"></label>
+                <td><input type="password" placeholder="password" name="pwd"></td>
+            </tr>
+
+            <tr>
+                <td><label for="">Hobbies</label></td>
+                <td>
+                    <input type="checkbox" value="maths" name="chk[]">maths
+                    <input type="checkbox" value="science" name="chk[]">Sceince
+                    <input type="checkbox" value="finance" name="chk[]">Finance
+                </td>
+                
+            </tr>
+
+            <tr>
+                <td><input type="Submit" name="sbt" value="Submit"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
