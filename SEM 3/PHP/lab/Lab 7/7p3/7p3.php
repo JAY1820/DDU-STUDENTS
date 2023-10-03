@@ -1,37 +1,29 @@
 <?php
-
 class Course {
     protected $coursename;
     protected $noofyear;
-    
     public function setCourseName($coursename) {
         $this->coursename = $coursename;
     }
-    
     public function getCourseName() {
         return $this->coursename;
     }
-    
     public function setNoOfYear($noofyear) {
         $this->noofyear = $noofyear;
     }
-    
     public function getNoOfYear() {
         return $this->noofyear;
     }
 }
-
 class Student extends Course {
     protected $name;
     protected $passoutyear;
     protected $resultclass;
-    
     public function setValue($name, $passoutyear, $resultclass) {
         $this->name = $name;
         $this->passoutyear = $passoutyear;
         $this->resultclass = $resultclass;
     }
-    
     public function display() {
         echo "Name: " . $this->name . "<br>";
         echo "Passout Year: " . $this->passoutyear . "<br>";
@@ -40,7 +32,6 @@ class Student extends Course {
         echo "No. of Year: " . $this->getNoOfYear() . "<br><br>";
     }
 }
-
 $obj1 = new Student();
 $obj1->setCourseName("B.Tech");
 $obj1->setNoOfYear(4);
@@ -58,6 +49,4 @@ $obj3->setCourseName("B.Sc");
 $obj3->setNoOfYear(3);
 $obj3->setValue("Yagna", 2019, "Third");
 $obj3->display();
-
-
 ?>
